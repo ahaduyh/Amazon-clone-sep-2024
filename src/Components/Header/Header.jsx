@@ -3,6 +3,7 @@ import { BsSearch } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
 import style from "./Header.module.css";
 import LowerHeader from "./LowerHeader";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -10,13 +11,13 @@ function Header() {
       <section className={style.header_container}>
         <div className={style.header_left_container}>
           {/* logo */}
-          <a href="/">
+          <Link to="/">
             <img
               className={style.header_amazon_logo}
               src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
               alt="amazon logo"
             />
-          </a>
+          </Link>
           {/* delivery */}
           <div className={style.delivery}>
             <span>
@@ -50,20 +51,20 @@ function Header() {
             </select>
           </a>
 
-          <a href="">
+          <Link to="/auth">
             <p>Sign In</p>
             <span>Account & Lists</span>
-          </a>
+          </Link>
 
-          <a href="">
+          <Link to="/orders">
             <p>returns</p>
             <span>& Orders</span>
-          </a>
+          </Link>
 
-          <a href="" className={style.cart}>
+          <Link to="/cart" className={style.cart}>
             <BiCart size={35} />
             <span> 0 </span>
-          </a>
+          </Link>
         </div>
       </section>
       <LowerHeader />
