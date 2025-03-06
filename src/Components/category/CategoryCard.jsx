@@ -1,19 +1,18 @@
-/* eslint-disable */
-
 import style from "./Category.module.css";
+import { Link } from "react-router-dom";
 
 function CategoryCard({ data }) {
   console.log(data);
-  const { category, img } = data;
+  const { category, image } = data;
   return (
     <div className={style.categoryCard_container}>
-      <a>
+      <Link to={`/category/${category}`}>
         <span>
           <h2>{category}</h2>
         </span>
-        <img src={img} />
+        <img src={image} />
         <p>Shop now</p>
-      </a>
+      </Link>
     </div>
   );
 }

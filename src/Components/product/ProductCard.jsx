@@ -1,21 +1,23 @@
 /* eslint-disable */
 import style from "./Product.module.css";
+import { Link } from "react-router-dom";
 import { Rating } from "react-simple-star-rating";
 import CurrencyFormat from "../currencyFormat/CurrencyFormat";
 function ProductCard({ data }) {
-  const { image, title, rating, price } = data;
+  const { image, title, rating, price, id } = data;
+
   return (
     <div className={style.productCard}>
-      <a href="">
+      <Link to={`/products/${id}`}>
         <img src={image} alt="product image" />
-      </a>
+      </Link>
       <div>
         <h3>{title}</h3>
-        <div className={style.rating}>
+        <div className={style.rating_container}>
           <span>
-            <Rating size={15} initialValue={rating.rate} />
+            {/* <Rating size={15} initialValue={rating.rate} /> */}
           </span>
-          <small>{rating.count}</small>
+          {/* <small>{rating.count}</small> */}
         </div>
         <div>
           <CurrencyFormat amount={price} />
