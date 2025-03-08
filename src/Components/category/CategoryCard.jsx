@@ -2,7 +2,7 @@ import style from "./Category.module.css";
 import { Link } from "react-router-dom";
 
 function CategoryCard({ data }) {
-  console.log(data);
+  // console.log(data);
   const { category, image } = data;
   return (
     <div className={style.categoryCard_container}>

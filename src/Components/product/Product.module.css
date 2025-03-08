@@ -14,7 +14,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  margin: auto auto;
+  margin: 10px auto;
 }
 .button:hover {
   background-color: var(--primary-shade);
@@ -30,6 +30,7 @@
   display: flex;
   align-items: center;
   padding: 10px 0px;
+  gap: 3px;
 }
 .productCard h3 {
   font-size: 12px;
@@ -47,7 +48,27 @@
   text-decoration: none;
   color: black;
   width: 180px;
-  height: auto;
+  height: 330px;
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.productFlex {
+  display: flex;
+  width: 800px;
+  height:auto;
+}
+.productFlex p {
+  margin-top: 40px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 5vh;
+}
+.productFlex .button {
+  display: block;
+  max-width: 250px;
+  margin-left: 250px;
+}
+.productFlex img {
+  width: 250px;
+  height: 250px;
 }

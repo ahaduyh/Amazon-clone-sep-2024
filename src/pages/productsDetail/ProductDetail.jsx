@@ -20,12 +20,11 @@ function ProductDetail() {
       .catch((err) => {
         console.log(err.message);
       });
-  },);
+  });
   return (
     <Layout>
       <div className={style.productDetail_container}>
-        <ProductCard data={product} />
-        <p>{product.description}</p>
+        <ProductCard data={product} flex={true} hasDescription={true} />
       </div>
     </Layout>
   );

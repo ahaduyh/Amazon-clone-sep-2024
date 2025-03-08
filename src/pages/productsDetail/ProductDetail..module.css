@@ -1,16 +1,11 @@
-.productDetail_container{
+/* .productDetail_container{
   display: flex;
   justify-content: flex-start;
   border: 1px solid rgb(179, 179, 194);
   height: 300px;
 }
 .productDetail_container p {
-  font-weight: 600;
-  font-size: 14px;
-  max-width: 700px;
-  padding: 40px 10px;
-  line-height: 7vh;
-}
+} */
 /* .productDetail_container :nth-child(1) img{
     background-color: yellow;
     width: 300px;
