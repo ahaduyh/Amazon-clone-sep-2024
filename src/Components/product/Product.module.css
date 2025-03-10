@@ -55,7 +55,7 @@
 .productFlex {
   display: flex;
   width: 800px;
-  height:auto;
+  height: auto;
 }
 .productFlex p {
   margin-top: 40px;

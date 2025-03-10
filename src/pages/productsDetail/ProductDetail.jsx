@@ -24,7 +24,12 @@ function ProductDetail() {
   return (
     <Layout>
       <div className={style.productDetail_container}>
-        <ProductCard data={product} flex={true} hasDescription={true} />
+        <ProductCard
+          data={product}
+          flex={true}
+          addToCartBtn={true}
+          hasDescription={true}
+        />
       </div>
     </Layout>
   );

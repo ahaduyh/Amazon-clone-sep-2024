@@ -7,15 +7,15 @@ import { useContext } from "react";
 import { DataContext } from "../DataProvider/DataProvider";
 import { Type } from "../../utility/action.type";
 
-function ProductCard({ data, flex, hasDescription }) {
+function ProductCard({ data, flex, hasDescription, addToCartBtn }) {
   const { image, title, rating, price, id, description } = data;
 
   const [state, dispatch] = useContext(DataContext);
-  console.log(state);
+  // console.log(state);
   const addToCart = () => {
     dispatch({
       type: Type.ADD_TO_BASKET,
-      itme: { image, title, rating, price, id, description },
+      item: { image, title, rating, price, id, description },
     });
   };
 
@@ -39,9 +39,11 @@ function ProductCard({ data, flex, hasDescription }) {
           <CurrencyFormat amount={price} />
         </div>
       </div>
-      <button className={style.button} onClick={addToCart}>
-        Add to cart
-      </button>
+      {addToCartBtn && (
+        <button className={style.button} onClick={addToCart}>
+          Add to cart
+        </button>
+      )}
     </div>
   );
 }

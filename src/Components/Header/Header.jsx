@@ -9,7 +9,7 @@ import { DataContext } from "../DataProvider/DataProvider";
 
 function Header() {
   const [{ basket }, dispatch] = useContext(DataContext);
-  console.log(basket.length);
+  // console.log(basket.length);
 
   return (
     <section className={style.header_fixed}>

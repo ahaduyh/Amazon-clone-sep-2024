@@ -18,7 +18,7 @@ function Product() {
   return (
     <div className={style.product_container}>
       {products?.map((product, i) => {
-        return <ProductCard key={i} data={product} />;
+        return <ProductCard key={i} data={product} addToCartBtn={true} />;
       })}
     </div>
   );
