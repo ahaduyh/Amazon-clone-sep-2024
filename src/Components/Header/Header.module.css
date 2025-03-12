@@ -1,14 +1,17 @@
-.header_fixed{ position:sticky;
-  top:0;
-  z-index: 1000;}
-.header_container {
 
+.header_fixed {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.header_container {
   background-color: #131921;
   color: white;
   display: flex;
   gap: 10px;
   align-items: center;
   height: 70px;
+  padding-right: 10px;
 }
 
 .header_left_container {

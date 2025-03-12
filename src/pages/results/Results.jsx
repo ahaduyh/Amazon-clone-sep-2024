@@ -20,7 +20,7 @@ function Results() {
       .catch((err) => {
         console.log(err.message);
       });
-  });
+  }, [categoryName]);
   return (
     <Layout>
       <h1>Results</h1>

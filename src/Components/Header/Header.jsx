@@ -9,7 +9,9 @@ import { DataContext } from "../DataProvider/DataProvider";
 
 function Header() {
   const [{ basket }, dispatch] = useContext(DataContext);
-  // console.log(basket.length);
+  const totalLength = basket?.reduce((amount, item) => {
+    return item.amount + amount;
+  }, 0);
 
   return (
     <section className={style.header_fixed}>
@@ -40,7 +42,6 @@ function Header() {
             <option value="">All</option>
           </select>
           <input type="text" name="" id="" placeholder="search product" />
-
           <BsSearch size={25} />
         </div>
 
@@ -50,7 +51,6 @@ function Header() {
               src="https://pngimg.com/uploads/flags/flags_PNG14592.png"
               alt="usa flag"
             />
-
             <select name="" id="">
               <option value="">EN</option>
             </select>
@@ -68,7 +68,7 @@ function Header() {
 
           <Link to="/cart" className={style.cart}>
             <BiCart size={35} />
-            <span> {basket.length} </span>
+            <span> {totalLength} </span>
           </Link>
         </div>
       </section>

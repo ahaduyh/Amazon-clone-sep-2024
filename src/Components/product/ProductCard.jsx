@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { DataContext } from "../DataProvider/DataProvider";
 import { Type } from "../../utility/action.type";
 
-function ProductCard({ data, flex, hasDescription, addToCartBtn }) {
+function ProductCard({ data, flex, hasDescription, addToCartBtn, hr }) {
   const { image, title, rating, price, id, description } = data;
 
   const [state, dispatch] = useContext(DataContext);
@@ -38,6 +38,7 @@ function ProductCard({ data, flex, hasDescription, addToCartBtn }) {
         <div>
           <CurrencyFormat amount={price} />
         </div>
+        {hr && <hr />}
       </div>
       {addToCartBtn && (
         <button className={style.button} onClick={addToCart}>

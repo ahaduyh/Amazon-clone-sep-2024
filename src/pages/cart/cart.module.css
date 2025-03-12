@@ -2,9 +2,23 @@
   display: flex;
   margin-top: 20px;
   gap: 20px;
+  /* text-align: center; */
 }
 .cart_container_outer img {
-width: 100px;
+  width: 100px;
+}
+.cart_products {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+
+  
+}
+.amounteUpdateBtn {
+  display: flex;
+  flex-direction: column;
+  margin: auto 10px;
 }
 .cart_container_inner {
   padding: 20px;
@@ -18,10 +32,13 @@ width: 100px;
 }
 
 .subtotal {
+  position: fixed;
+  right: 2vw;
+  bottom: 50vh;
   margin-top: 20px;
   padding: 20px;
-  min-width: 300px;
-  height: 80%;
+  min-width: 260px;
+  height: 18.5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
